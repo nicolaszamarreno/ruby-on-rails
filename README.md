@@ -47,6 +47,17 @@ $ docker-compose up -d
 $ docker-compose run app rake db:create
 ```
 
+### Tips
+Sometimes, when you modify your files, nothing is happening...  
+So, you have to change in your configuration `config/environments/development.rb`
+```ruby
+config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+```
+change `EventedFileUpdateChecker` by `FileUpdateChecker`
+> **Magic !**
+```ruby
+config.file_watcher = ActiveSupport::FileUpdateChecker
+```
 ## The result 
 _You can play with your application, before, you can show your ip machine of your VM with this command_
 ```bash

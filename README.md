@@ -4,7 +4,7 @@ A little app for discovery the magnifient Ruby.
 ## Installation
 _The installation it's easy with Docker. You should just follow instructions below:_
 ```bash
-$ docker-compose run app rails new . --force --database=mysql --skip-bundle
+$ docker-compose run ruby rails new . --force --database=mysql --skip-bundle
 ```
 
 > __Great !__  
@@ -44,7 +44,7 @@ _It's easy launch these commands_
 $ docker-compose up -d
 
 # Create your database
-$ docker-compose run app rake db:create
+$ docker-compose run ruby rake db:create
 ```
 
 ### Tips
